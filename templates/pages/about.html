@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize%}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+<div class="container frame"id="about">
+       <div class="container about">
+            <div class="grid">
+                <div class="left">
+                    <img src="{% static 'img/esther.jpg' %}" class="imgn" alt="img">
+                </div>
+                <div class="right">
+                    <h1>Esther Goldman</h1><br>
+                    <p>Born in Venezuela, Living in Israel. I'm a Full Stack Developer with previous experience in Design and Sales. I enjoy learning new things and applying new skills to everything I do. </p>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

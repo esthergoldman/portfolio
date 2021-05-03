@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize%}
+
+{% block title %} {{ one_project.name }}  {% endblock %}
+
+{% block content %}
+
+<section class="project">
+    <div class="container wrapper w-50 p-3 h-25">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card shadow border-0 imageborders">
+                     <div class="row py-2 text-secondary">
+                        <div class="col-3 text-left">
+                            <a href="{% url 'portfolio' %}" class=" imageborder btn btn-link btn-block"><i class="fas fa-chevron-left"></i> Back</a>                                    
+                        </div>
+                    </div>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h1 class="card-title text-info"> {{ one_project.name }} </h1>
+                            </div>
+                                <div class="row py-2">
+                                    <div class="col-12 text-center">
+                                    <p>{{ one_project.description }}</p>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-12 text-center text-info">
+                                    <h3>Tools:</h3>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                    <p>{{ one_project.tools }}</p>
+                                    </div>
+                                </div>
+                                <div class="row py-2 text-secondary text-center">
+                                    <div class="col-12">
+                                    <a href="{{one_project.github }}" class="btn btn-dark btn-sm ">Github</a>                                    
+                                    </div>
+                                </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
